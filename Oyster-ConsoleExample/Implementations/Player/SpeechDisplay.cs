@@ -9,8 +9,9 @@ namespace Oyster_ConsoleExample.Implementations.Player
             ITextField nameText,
             ITextField mainText,
             IShowAndHide nameTextBacking,
-            IShowAndHide mainTextBacking
-            ) : base(nameText, mainText, nameTextBacking, mainTextBacking)
+            IShowAndHide mainTextBacking,
+            IShowAndHide prompt
+            ) : base(nameText, mainText, nameTextBacking, mainTextBacking, prompt)
         {
         }
     }
