@@ -35,7 +35,6 @@ internal class Program
 
         // Loop while running
         float deltaTime = 1f / 60;
-        string mainTextLastFrame = mainText.Text;
         while (_running)
         {
             // Make new t
