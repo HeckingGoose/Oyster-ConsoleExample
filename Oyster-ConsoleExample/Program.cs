@@ -35,6 +35,7 @@ internal class Program
 
         // Loop while running
         float deltaTime = 1f / 60;
+        string mainTextLastFrame = mainText.Text;
         while (_running)
         {
             // Make new t
@@ -47,24 +48,16 @@ internal class Program
             // Clear screen
             Console.Clear();
 
-            // Draw name text
-            Console.WriteLine(nameText.Text);
-            Console.WriteLine();
-
-            // Draw main text
-            Console.WriteLine(mainText.Text);
-
-            // Draw continue prompt if needs to
-            if (_prompt.Shown)
-            {
-                Console.WriteLine("Text Done");
-            }
-            else Console.WriteLine();
-
-            // Prompt
-            Console.WriteLine();
-            Console.WriteLine("'A' To simulate mouse click, submit nothing to simply update display.");
-            Console.Write(">>> ");
+            // Draw all text in one go
+            Console.Write(
+                $"{nameText.Text}\n" +
+                $"\n" +
+                $"{mainText.Text}\n" +
+                $"\n" +
+                $"{(_prompt.Shown ? "Text Done" : "")}\n" +
+                $"\n" +
+                $"Press the 'A' key To simulate a mouse click\n" +
+                $">>> ");
 
             // If we have input then
             if (Console.KeyAvailable)
@@ -81,7 +74,7 @@ internal class Program
             }
 
             // Wait
-            Thread.Sleep(150);
+            Thread.Sleep(100);
 
             // Take time
             deltaTime = (float)sw.ElapsedMilliseconds / 1000;
