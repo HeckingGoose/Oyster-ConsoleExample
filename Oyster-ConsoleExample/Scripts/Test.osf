@@ -2,6 +2,8 @@
 meta [game="Base"]
 meta [version="4.1.0"]
 
+Set_IntVar ["MyNumber", 100]
+
 act_speak ["I'm test text"]
 act_append [" Me too!"]
 act_speak ["I overwrote them mwahaha!"]
