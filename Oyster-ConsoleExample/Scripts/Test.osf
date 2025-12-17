@@ -3,7 +3,10 @@ meta [game="Base"]
 meta [version="4.1.0"]
 
 Set_IntVar ["MyNumber", 100]
+Set_StringVar ["MyString", "pine cone"]
 
-act_speak ["I'm test text"]
-act_append [" Me too!"]
-act_speak ["I overwrote them mwahaha!"]
+act_speak ["I'm testing that Act_Speak works!"]
+act_append [" And I do Act_Append!"]
+act_speak ["Lmao I, Act_Speak, just overwrote them!"]
+act_speak [$"The value of 'MyNumber' is {MyNumber}"]
+act_speak [$MyString]
