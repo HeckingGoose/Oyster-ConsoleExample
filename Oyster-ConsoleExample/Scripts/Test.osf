@@ -5,8 +5,15 @@ meta [version="4.1.0"]
 Set_IntVar ["MyNumber", 100]
 Set_StringVar ["MyString", "pine cone"]
 
+line_marker ["Reset"]
+
 act_speak ["I'm testing that Act_Speak works!"]
 act_append [" And I do Act_Append!"]
 act_speak ["Lmao I, Act_Speak, just overwrote them!"]
 act_speak [$"The value of 'MyNumber' is {MyNumber}"]
 act_speak [$MyString]
+
+act_speak ["Setting 'MyNumber' to 5"]
+set_intvar ["MyNumber", 5]
+
+jump_to ["Reset"]
