@@ -16,4 +16,7 @@ act_speak [$MyString]
 act_speak ["Setting 'MyNumber' to 5"]
 set_intvar ["MyNumber", 5]
 
+act_speak ["Waiting 2 seconds and then looping!", wait=false, instant=true]
+sys_wait [2000, canSkip=false]
+
 jump_to ["Reset"]
