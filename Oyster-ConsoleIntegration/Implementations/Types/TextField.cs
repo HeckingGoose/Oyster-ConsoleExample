@@ -1,4 +1,5 @@
-﻿using Oyster.Core.Interfaces.EngineImplementation;
+﻿using Oyster.Core.Interfaces.Things;
+using Oyster.Core.Types;
 using System.Drawing;
 
 namespace Oyster_ConsoleExample.Implementations.Types
@@ -26,6 +27,6 @@ namespace Oyster_ConsoleExample.Implementations.Types
 
         // Accessors
         public string Text { get { return _text; } set { _text = value; } }
-        public Color TextColour { get { return _colour; } set { _colour = value; } }
+        public Colour TextColour { get { return _colour.ToOysterColour(); } set { _colour = value.ToSystemColour(); } }
     }
 }

@@ -1,4 +1,4 @@
-﻿using Oyster.Core.Interfaces.EngineImplementation;
+﻿using Oyster.Core.Interfaces.Things;
 
 namespace Oyster_ConsoleExample.Implementations.Types
 {
