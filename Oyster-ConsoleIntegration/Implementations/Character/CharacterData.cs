@@ -14,13 +14,18 @@ namespace Oyster_ConsoleExample.Implementations.Character
             Color nameColour,
             float timeBetweenCharacters,
             string scriptPath
-            ) : base(name, nameColour, timeBetweenCharacters) { _scriptPath = scriptPath; }
+            ) : base(name, nameColour.ToOysterColour(), timeBetweenCharacters) { _scriptPath = scriptPath; }
 
         // Public Methods
         public override A_BackgroundAssetLoader<string> BeginScriptLoad()
         {
             // Make asset loader and return it
             return new TextLoader(_scriptPath);
+        }
+
+        public override void RevertScript()
+        {
+            throw new NotImplementedException();
         }
     }
 }
